@@ -56,7 +56,7 @@ def __display(server: ServerInterface, name: str, position: Position, dimension_
 			)
 		))
 	if config.display_xaero_waypoint:
-		command = "xaero_waypoint_add:{}'s Location:{}:{}:{}:{}:6:false:0".format(name, name[0], int(x), int(y), int(z))
+		command = "/xaero_waypoint_add:{}'s Location:{}:{}:{}:{}:6:false:0".format(name, name[0], int(x), int(y), int(z))
 		if isinstance(dimension, LegacyDimension):
 			command += ':Internal_{}_waypoints'.format(dimension.get_reg_key().replace('minecraft:', '').strip())
 		texts.append(' ',  RText('[+X]', RColor.gold).h('§6Xaeros Minimap§r: 点击添加路径点').c(RAction.run_command, command))
